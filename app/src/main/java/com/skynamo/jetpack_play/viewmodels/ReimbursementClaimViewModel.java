@@ -1,34 +1,46 @@
 package com.skynamo.jetpack_play.viewmodels;
 
+import com.skynamo.jetpack_play.model.ReimbursementClaimModel;
+
 import androidx.lifecycle.ViewModel;
 
 public class ReimbursementClaimViewModel extends ViewModel {
 
-    /*private MutableLiveData<Double> odoBefore;
-    private MutableLiveData<Double> odoAfter;*/
-
-    private Double odoBefore;
-    private Double odoAfter;
+    private ReimbursementClaimModel mModel;
 
     public Double getOdoBefore() {
-        if (odoBefore == null) {
-            odoBefore = 4658.0;
+        if (mModel == null) {
+            loadModel();
         }
-        return odoBefore;
+        return mModel.getOdoBefore();
     }
 
     public Double getOdoAfter() {
-        if (odoAfter == null) {
-            odoAfter = 7556.1;
+        if (mModel == null) {
+            loadModel();
         }
-        return odoAfter;
+        return mModel.getOdoAfter();
     }
 
-//    private void loadOdoAfter() {
-//        odoAfter = new MutableLiveData<>();
-//    }
-//
-//    private void loadOdoBefore() {
-//        odoBefore = new MutableLiveData<>();
-//    }
+    public Double getDistance() {
+        if (mModel == null) {
+            loadModel();
+        }
+
+        Double before = mModel.getOdoBefore();
+        Double after = mModel.getOdoAfter();
+
+        if (before != null && after != null) {
+            return after - before;
+        }
+
+        return null;
+    }
+
+    private void loadModel() {
+        mModel = new ReimbursementClaimModel();
+        mModel.setOdoBefore(4658.0);
+        mModel.setOdoAfter(7556.1);
+    }
+
 }
