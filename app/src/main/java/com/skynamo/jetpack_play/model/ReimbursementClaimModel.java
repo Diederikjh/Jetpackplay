@@ -21,4 +21,10 @@ public class ReimbursementClaimModel {
     private Double odoBefore;
     private Double odoAfter;
 
+    public Double getDistance() {
+        if (odoBefore != null && odoAfter != null) {
+            return odoAfter - odoBefore;
+        }
+        return null;
+    }
 }

@@ -27,14 +27,7 @@ public class ReimbursementClaimViewModel extends ViewModel {
             loadModel();
         }
 
-        Double before = mModel.getOdoBefore();
-        Double after = mModel.getOdoAfter();
-
-        if (before != null && after != null) {
-            return after - before;
-        }
-
-        return null;
+        return mModel.getDistance();
     }
 
     private void loadModel() {
