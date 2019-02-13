@@ -1,4 +1,4 @@
-package com.skynamo.jetpack_play.jetpack_play;
+package com.skynamo.jetpack_play;
 
 import org.junit.Test;
 
