@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.skynamo.jetpack_play.jetpack_play", appContext.getPackageName());
+        assertEquals("com.skynamo.jetpack_play", appContext.getPackageName());
     }
 }

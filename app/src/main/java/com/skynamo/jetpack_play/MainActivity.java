@@ -2,8 +2,7 @@ package com.skynamo.jetpack_play;
 
 import android.os.Bundle;
 
-import com.skynamo.jetpack_play.jetpack_play.R;
-import com.skynamo.jetpack_play.jetpack_play.databinding.ActivityMainBinding;
+import com.skynamo.jetpack_play.databinding.ActivityMainBinding;
 import com.skynamo.jetpack_play.viewmodels.ReimbursementClaimViewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
